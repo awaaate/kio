@@ -1,0 +1,10 @@
+<div class="container">
+	<h1 class="title">Kios disponibles</h1>
+	<ul class="list-group">
+		{{#each rooms}}
+			<a class="list-group-item" href="/room/{{name}}"><p>{{name}}</p></a>
+		{{/each}}
+	</ul>
+	<a class="btn btn-default btn-lg" href="/room/new" role="button">Crear kio</a>
+</div>
+

@@ -1,0 +1,61 @@
+*{
+	font-family: "Lalezar";
+	font-size: 20px;
+	color: #0000;
+	padding-top: 1px;
+}
+.div-user {
+    height: 100%;
+}
+.list-group{
+	color: #A0A0A0;
+}
+.title{
+    padding:  10px;
+    font-family: "Lalezar", cursive;
+    text-align: center;
+}
+.btn-delete{
+    position: fixed;
+    z-index: 9999;
+    width: 17%;
+    height: 100%;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+}
+
+.form { 
+    padding: 3px; 
+    position: fixed; 
+    bottom: 40px; 
+    width: 80%; 
+}
+.list-group-item{
+	margin-top: 5px;
+}
+.input {  
+    border: 2px solid rgb(130, 224, 255);
+    padding: 10px; 
+    width: 85%; 
+
+}
+.button { 
+    width: 14%; 
+    padding-right: 1px;
+    background: rgb(130, 224, 255); 
+    border: none;
+    padding: 11px; 
+}
+#messages { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+#messages li { 
+    padding: 5px 10px;
+    background: #0000; 
+}
+#messages li:nth-child(odd) { 
+    background: #eee; 
+}

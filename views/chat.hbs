@@ -1,0 +1,41 @@
+    <div class="all">
+    <div class="container chat col-md-10">
+      <div class="div-chat">
+      <ul id="messages"></ul>
+        <form action="" class="form">
+          <input id="m" class="input" autocomplete="off" required="true">
+          <button class="button">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row col-md-2 div-user">
+      <form method="post" action="/room/{{name}}?_method=DELETE" class="form-inline">
+        <button type="submit" class="btn btn-danger btn-delete"><strong>Delete</strong></button>
+      </form>
+    </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+    var socket = io();
+    var lista = "white"
+    $('.form').submit(function(){
+        socket.emit('chat message', $('#m').val(), "{{ name }}");
+        $('#m').val('');
+        return false;
+    });
+    socket.on('chat message', function(msg, server){
+        if(lista == "white"){
+            lista = "black"
+        }
+        else{
+            lista = 'white'
+        }
+        if(server === "{{name}}"){
+            $('#messages').append($('<li class='+ lista +'>').text(msg));
+        }
+          
+    });
+    </script>
